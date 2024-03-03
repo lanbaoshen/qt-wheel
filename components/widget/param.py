@@ -2,7 +2,7 @@ from PySide6 import QtWidgets
 from PySide6.QtCore import QSettings
 from pydantic import BaseModel
 
-from ..base_widget import BaseWidget
+from components.widget._base import Base
 
 
 settings = QSettings('settings.ini', QSettings.IniFormat)
@@ -12,7 +12,7 @@ class _Params(BaseModel):
     foo: str
 
 
-class ParamWidget(BaseWidget):
+class Param(Base):
     # Settings
     FOO = 'foo'
 

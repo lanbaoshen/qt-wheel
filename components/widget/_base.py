@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets
 
 
-class BaseWidget(QtWidgets.QWidget):
+class Base(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setObjectName(self.__class__.__name__)

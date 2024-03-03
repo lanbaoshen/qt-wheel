@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets
 
 
-class SwitchLockedRadioButton(QtWidgets.QRadioButton):
+class SwitchLocked(QtWidgets.QRadioButton):
     UNLOCK = 'Unlock'
     LOCK = 'Lock'
 

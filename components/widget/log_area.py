@@ -2,10 +2,10 @@ from datetime import datetime
 
 from PySide6 import QtWidgets
 
-from ..base_widget import BaseWidget
+from components.widget._base import Base
 
 
-class LogAreaWidget(BaseWidget):
+class LogArea(Base):
     def _initialize(self):
         self.log_text_edit = QtWidgets.QTextEdit()
         self.clear_push_button = QtWidgets.QPushButton('Clear')
