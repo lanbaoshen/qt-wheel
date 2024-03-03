@@ -15,8 +15,10 @@ class LogArea(Base):
 
     def _layout(self) -> QtWidgets.QGridLayout:
         layout = QtWidgets.QGridLayout()
+
         layout.addWidget(self.clear_push_button, 0, 0)
         layout.addWidget(self.log_text_edit, 1, 0)
+
         return layout
 
     def log(self, msg: str, level: str = 'INFO'):
