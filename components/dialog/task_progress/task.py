@@ -7,8 +7,7 @@ class ProgressSignal(QObject):
 
 class Task(QRunnable):
     """
-    Background Task for background task progress dialog,
-    callback will be assigned by background task progress dialog
+    Task for task progress dialog
     """
     def __init__(self, *, target):
         super().__init__()

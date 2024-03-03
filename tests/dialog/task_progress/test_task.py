@@ -5,7 +5,7 @@ from PySide6.QtCore import QThreadPool
 from components.dialog.task_progress import Task
 
 
-def test_background_task():
+def test_task():
     def update_temp():
         time.sleep(0.1)
         temp.append(1)
@@ -13,8 +13,8 @@ def test_background_task():
     temp = []
 
     thread_pool = QThreadPool.globalInstance()
-    background_task = Task(target=update_temp)
-    thread_pool.start(background_task)
+    task = Task(target=update_temp)
+    thread_pool.start(task)
 
     assert temp == []
 
