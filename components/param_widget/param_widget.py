@@ -16,16 +16,10 @@ class ParamWidget(BaseWidget):
     # Settings
     FOO = 'foo'
 
-    def __init__(self, parent=None):
-        self.input_widgets: list[QtWidgets.QWidget] = []
-        super().__init__(parent)
-
     def _initialize(self):
         self.foo_label = QtWidgets.QLabel('Foo:')
 
         self.foo_line_edit = QtWidgets.QLineEdit(settings.value(self.FOO))
-
-        self.input_widgets.extend([self.foo_line_edit])
 
     def _layout(self) -> QtWidgets.QGridLayout:
         layout = QtWidgets.QGridLayout()
